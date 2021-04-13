@@ -1,0 +1,18 @@
+{% extends 'basic/base.html' %}
+
+{% block content %}
+
+<h2>Welcome to DjangoGramm! Please, sign up</h2>
+
+<form method="post">
+  {% csrf_token %}
+  {% for f in form %}
+    <p><label >{{ f.label }}: </label> {{ f }}</p>
+    <p>{{ f.errors }}</p>
+  {% endfor %}
+  <button type="submit">Sign in</button>
+</form>
+
+<p>If you don't have account, please register <a href="{% url 'django-registration-register' %}">here</a></p>
+
+{% endblock %}

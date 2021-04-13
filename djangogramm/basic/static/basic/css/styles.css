@@ -1,0 +1,9 @@
+.menu ul {
+  padding: 0em 0;
+}
+.menu a {
+  padding: 0.5em;
+}
+.menu li {
+  display: inline;
+}

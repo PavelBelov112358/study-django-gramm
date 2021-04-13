@@ -1,0 +1,20 @@
+{% extends 'basic/base.html' %}
+
+{% block content %}
+
+<h2>Registration for DjangoGramm</h2>
+
+<form method="post">
+  {% csrf_token %}
+  {% for f in form %}
+  <p><label >{{ f.label }}: </label> {{ f }}</p>
+  <p>{{ f.errors }}</p>
+  {% endfor %}
+  <button type="submit">Sign up</button>
+</form>
+
+<div></div>
+
+<a href="{% url 'home' %}">Return to the homepage</a>
+
+{% endblock %}

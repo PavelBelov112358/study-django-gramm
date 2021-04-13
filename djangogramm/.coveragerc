@@ -1,0 +1,8 @@
+[run]
+source = basic
+omit =
+    *migrations*
+    *tests*
+    *test_*
+    *_tests*
+    *__init__*

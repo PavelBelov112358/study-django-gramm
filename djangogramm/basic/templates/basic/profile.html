@@ -1,0 +1,40 @@
+{% extends 'basic/base.html' %}
+
+{% block content %}
+
+<div></div>
+
+{% if is_owner %}
+<a href="{% url 'settings-profile' profile.identifier %}">Settings</a>
+{% endif %}
+
+<h2>{{profile.first_name}} {{profile.last_name}}</h2>
+
+{% if profile.avatar %}
+<img src='{{profile.avatar.url}}' height=250 alt="{{profile.first_name}} {{profile.last_name}}">
+{% endif %}
+
+{% if profile.bio %}
+<h3>Biography</h3>
+<p>{{profile.bio}}</p>
+{% endif %}
+
+{% if posts %}
+<h3>Posts</h3>
+<ul>
+    {% for post in posts %}
+        <li>
+            {% for p in post %}
+                {% if forloop.first %}
+                    <p>{{p.post.title}}</p>
+                {% endif %}
+                <div>
+                    <img src="{{p.photo.thumbnail.url}}" alt="{{p.post}}">
+                </div>
+            {% endfor %}
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}

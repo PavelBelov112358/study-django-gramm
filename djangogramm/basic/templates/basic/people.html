@@ -1,0 +1,15 @@
+{% extends 'basic/base.html' %}
+
+{% block content %}
+<h2>{{title}}</h2>
+<div></div>
+<ul>
+    {% for p in people %}
+        <li>
+            <div>
+                <h3><a href="{{p.get_absolute_url}}">{{p.first_name}} {{p.last_name}}</a></h3>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

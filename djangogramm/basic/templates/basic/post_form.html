@@ -1,0 +1,14 @@
+{% extends 'basic/base.html' %}
+
+{% block content %}
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {% for f in form.visible_fields %}
+  <p><label >{{ f.label }}: </label> {{ f }}</p>
+  <p>{{ f.errors }}</p>
+  {% endfor %}
+  <button type="submit">Confirm</button>
+</form>
+
+{% endblock %}
