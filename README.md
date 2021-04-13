@@ -1,5 +1,7 @@
 It's a training task from courses.
 
+# DjangoGramm
+
 Storyline
 
 Write a program like Instagram.
