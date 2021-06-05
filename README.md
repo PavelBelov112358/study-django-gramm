@@ -4,6 +4,7 @@ It's a training task from courses.
 
 ### Storyline
 
+#### Step #1
 * Write a program like Instagram.
 * This application must have a web interface.
 * The user can register on the website by email. After basic registration, the user will receive a confirmation of the continuation of registration.
